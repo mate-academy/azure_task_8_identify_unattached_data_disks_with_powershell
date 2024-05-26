@@ -11,7 +11,7 @@ $allDisks = Get-AzDisk -ResourceGroupName $resourceGroupName5
 
 # Filter unattached disks
 $unattachedDisks = $allDisks | Where-Object {
-    $_.ManagedBy -eq $null -or $_.DiskState -eq "Unattached")
+    $_.ManagedBy -eq $null -or $_.DiskState -eq "Unattached"
 }
 
 $resultFilePath = "./result.json"
