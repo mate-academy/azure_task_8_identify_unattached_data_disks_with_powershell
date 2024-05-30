@@ -1,6 +1,6 @@
 # Write your code here
 $resourceGroupName5 = "mate-azure-task-5"
-$nameVM = "test-alexhVM"
+$nameVM = "testVM"
 $nameResourse = "mate-azute-task-3"
 $VirtualMachine = Get-AzVM -ResourceGroupName $resourceGroupName5 -Name $nameVM
 # Get all disks in the specified resource group
