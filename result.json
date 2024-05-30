@@ -1,0 +1,6 @@
+{
+    "Id": "/subscriptions/4af01b23-abb2-402e-917a-592de46aac17/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/mate-azute-task-3",
+    "Name": "mate-azute-task-3",
+    "DiskSizeGB": 64,
+    "DiskState": "Unattached"
+  }
