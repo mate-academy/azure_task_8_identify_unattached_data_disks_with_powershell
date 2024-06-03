@@ -1,0 +1,6 @@
+{
+  "Id": "/subscriptions/05557aac-42da-4f44-9caf-6f337e43fcfe/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/vm-task-3-data",
+  "Name": "vm-task-3-data",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
