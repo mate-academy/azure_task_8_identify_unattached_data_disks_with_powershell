@@ -1,0 +1,6 @@
+{
+  "Id": "/subscriptions/93716f6e-9f47-44cd-b5de-8fb03d8b781c/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/data-disk",
+  "Name": "data-disk",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
