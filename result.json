@@ -1,0 +1,6 @@
+{
+  "Id": "/subscriptions/a9128bb2-f92f-47c6-be93-53c532bfea91/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/disc-ssd-task3",
+  "Name": "disc-ssd-task3",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
