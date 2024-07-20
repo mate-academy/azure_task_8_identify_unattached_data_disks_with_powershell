@@ -1,0 +1,6 @@
+{
+  "Id": "/subscriptions/e522e345-6958-4412-ac50-2288577f1a0a/resourceGroups/mate-resources-ukwest/providers/Microsoft.Compute/disks/mate-mgm-disk",
+  "Name": "mate-mgm-disk",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
