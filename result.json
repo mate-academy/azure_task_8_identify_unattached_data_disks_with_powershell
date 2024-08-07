@@ -1,0 +1,7 @@
+{
+  "Id": "/subscriptions/8a1e4a68-7e68-4755-b8bc-cf2cbecbcb19/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/unattached-disk",
+  "Name": "unattached-disk",
+  "Location": "ukwest",
+  "DiskSizeGB": 4,
+  "DiskState": "Unattached"
+}
