@@ -41,19 +41,19 @@ If you are a Windows user, before running this command, please also run the foll
 
 ## Requirements
 
-In this task, you will need to work with the infrastructure from the previous task [previous task](https://github.com/mate-academy/azure_task_5_move_vm_to_new_region). In order to complete the task, you need to perform the following steps: 
+In this task, you will need to work with the infrastructure from the previous task [previous task](https://github.com/mate-academy/azure_task_5_move_vm_to_new_region). In order to complete the task, you need to perform the following steps:
 
 1. Deatach the data disk from the VM, you worked with in the previous task. In order to complete this step, you need to [unmount the disk](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/detach-disk#connect-to-the-vm-to-unmount-the-disk), and then detach it using the [Powershell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/detach-disk#detach-a-data-disk-using-powershell)
 
-2. Write a Powershell script, which implements the task requirements below in the file `task.ps1` in this repo: 
-    
+2. Write a Powershell script, which implements the task requirements below in the file `task.ps1` in this repo:
+
     = The script should find all unattached disks in the resource group where the VM is deployed (`mate-azure-task-5`) and save information about them in JSON format to the file `result.json` in this repo.
     
-    - to find disks resources, the script should use comandlet [Get-AzDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azdisk?view=azps-11.5.0) from Az module. 
+    - to find disks resources, the script should use comandlet [Get-AzDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azdisk?view=azps-11.5.0) from Az module.
 
     - The script should filter disk objects to get only unattached ones. To check if a disk is attached, you can rely on either the 'DiskState' or 'ManagedBy' properties of the disk object, returned by the Get-AzDisk comandlet. When writing the script, explore the values of those properties to understand which value an unattached disk should have, and filter disk objects by that value in the script.  
 
-3. Run the script to save the information about unattached data disks to the `result.json`. 
+3. Run the script to save the information about unattached data disks to the `result.json`.
 
 4. Run artifacts generation script `scripts/generate-artifacts.ps1`
 
@@ -76,7 +76,7 @@ Here is how to complete tasks in this module:
 
 2. Make sure you completed the steps described in the Prerequisites section
 
-3. Complete the task described in the Requirements section 
+3. Complete the task described in the Requirements section
 
 4. Run `scripts/generate-artifacts.ps1` to generate task artifacts. The script will update the file `artifacts.json` in this repo. 
 
