@@ -41,12 +41,12 @@ If you are a Windows user, before running this command, please also run the foll
 
 ## Requirements
 
-In this task, you will need to work with the infrastructure from the previous task [previous task](https://github.com/mate-academy/azure_task_5_move_vm_to_new_region). In order to complete the task, you need to perform the following steps: 
+In this task, you will need to work with the infrastructure from the previous task [previous task](https://github.com/mate-academy/azure_task_5_move_vm_to_new_region). In order to complete the task, you need to perform the following steps:
 
 1. Deatach the data disk from the VM, you worked with in the previous task. In order to complete this step, you need to [unmount the disk](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/detach-disk#connect-to-the-vm-to-unmount-the-disk), and then detach it using the [Powershell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/detach-disk#detach-a-data-disk-using-powershell)
 
 2. Write a Powershell script, which implements the task requirements below in the file `task.ps1` in this repo: 
-    
+
     = The script should find all unattached disks in the resource group where the VM is deployed (`mate-azure-task-5`) and save information about them in JSON format to the file `result.json` in this repo.
     
     - to find disks resources, the script should use comandlet [Get-AzDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azdisk?view=azps-11.5.0) from Az module. 
@@ -61,7 +61,7 @@ In this task, you will need to work with the infrastructure from the previous ta
 
 6. Make sure that changes to both `task.ps1` and `result.json` are committed to the repo, and submit the solution for review.
 
-7. When the solution is validated, delete the resource group `mate-azure-task-5`— you won't need it anymore for the next tasks. 
+7. When the solution is validated, delete the resource group `mate-azure-task-5`— you won't need it anymore for the next tasks.
 
 ## How to complete tasks in this module 
 
