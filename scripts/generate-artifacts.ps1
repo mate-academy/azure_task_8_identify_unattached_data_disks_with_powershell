@@ -1,11 +1,11 @@
 param(
     [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-    [string]$ArtifactsStorageAccountName='matestorage123'
+    [string]$ArtifactsStorageAccountName
 )
 
 # default script values
-$rgName = "mate-azure-task-5"
-$taskName = "task8"
+$rgName = "mate-azure-task-2"
+$taskName = "task2"
 
 $containerName = "task-artifacts"
 $resourcesTemplateName = "exported-template.json"
@@ -37,6 +37,7 @@ if ($artifactContainer) {
 } else { 
     throw "Unable to find a storage container $containerName in the storage account $ArtifactsStorageAccountName, please make sure that it's created"
 }
+
 
 # generation of artifacts
 Write-Output "Generating artifacts"
