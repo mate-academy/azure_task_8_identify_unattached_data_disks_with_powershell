@@ -1,3 +1,3 @@
 {
-  "resourcesTemplate": ""
+  "resourcesTemplate": "https://matestorageaccount.blob.core.windows.net/task-artifacts/task8/exported-template.json?sv=2025-01-05&se=2025-03-13T14%3A35%3A48Z&sr=b&sp=r&sig=I2pFsR2dqmhfFmWmUVErMi0eg0ProhKAKk1bE%2BdVpS0%3D"
 }
