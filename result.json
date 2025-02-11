@@ -1,0 +1,12 @@
+{
+  "DiskState": "Unattached",
+  "CreationTime": "2025-02-07T14:29:47.8645099Z",
+  "DiskSizeGB": 64,
+  "OsType": null,
+  "SKU": {
+    "Name": "Premium_LRS",
+    "Tier": "Premium"
+  },
+  "Name": "task3-disk",
+  "Location": "ukwest"
+}
