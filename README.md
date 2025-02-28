@@ -4,7 +4,7 @@ While you are waiting for feedback on the new cost calculations for your infra, 
 
 - When you have a lot of VMs and more than one engineer working with the infrastructure, you can easily end up in a situation where someone deleted the VM but forgot to delete the data disk. 
 
-- This data disk would still be included in your subscription, and you will need to pay for it even if you are not using it. For example, 1TB Premium with ZRS replication costs around $200/month (the exact price depends on the region). 
+- This data disk would still be included in your subscription, and you will need to pay for it even if you are not using it. For example, 1TB Premium with ZRS replication costs around $200/month (the exact price depends on the region).
 
 - So you would want to periodically check if there are any unattached disks in your subscription. 
 
