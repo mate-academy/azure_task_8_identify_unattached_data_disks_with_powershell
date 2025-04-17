@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "diskw",
+    "ResourceGroupName": "mate-azure-task-5",
+    "DiskState": "Unattached",
+    "DiskSizeBytes": 68719476736,
+    "SkuName": "Premium_LRS",
+    "CreationTime": "2025-04-16T23:53:19.8978963Z",
+    "ManagedBy": null,
+    "Location": "ukwest"
+  }
+]
