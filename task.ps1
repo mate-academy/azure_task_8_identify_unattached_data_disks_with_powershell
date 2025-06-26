@@ -1,1 +1,8 @@
-# Write your code here
+$resourceGroup = "mate-azure-task-5"
+$allDisks = Get-AzDisk -ResourceGroupName $resourceGroup
+
+$unattachedDisk = $allDisks | Where-Object {
+  ($_.DiskState -eq "Unattached") -or ($_.ManagedBy -eq $null)
+}
+
+$unattachedDisk | ConvertTo-Json -Depth 5 | Set-Content -Path "./result.json"
