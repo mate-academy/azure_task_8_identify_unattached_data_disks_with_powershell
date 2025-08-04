@@ -1,0 +1,11 @@
+{
+  "Name": "mydatadisk",
+  "DiskSizeGB": 64,
+  "Location": "ukwest",
+  "DiskState": "Unattached",
+  "ResourceGroupName": "mate-azure-task-5",
+  "Sku": {
+    "Name": "Premium_LRS"
+  },
+  "ManagedBy": null
+}
