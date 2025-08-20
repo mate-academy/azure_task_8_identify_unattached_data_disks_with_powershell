@@ -1,0 +1,66 @@
+[
+  {
+    "ResourceGroupName": "mate-azure-task-5",
+    "ManagedBy": null,
+    "ManagedByExtended": [],
+    "Sku": {
+      "Name": "Premium_LRS",
+      "Tier": "Premium"
+    },
+    "Zones": null,
+    "TimeCreated": "2025-08-12T16:45:09.6985052Z",
+    "OsType": null,
+    "HyperVGeneration": null,
+    "CreationData": {
+      "CreateOption": "Restore",
+      "StorageAccountId": null,
+      "ImageReference": null,
+      "GalleryImageReference": null,
+      "SourceUri": null,
+      "SourceResourceId": "/subscriptions/90583dc9-ee23-4fad-84de-95d37c7fb376/resourceGroups/mate-azure-task-5-ukwest/providers/Microsoft.Compute/disks/demo-data-disk-ASRReplica/bookmark/26759743-1785-48a7-9342-08f41e53c356",
+      "SourceUniqueId": null,
+      "UploadSizeBytes": null,
+      "LogicalSectorSize": null,
+      "SecurityDataUri": null,
+      "PerformancePlus": null,
+      "ElasticSanResourceId": null,
+      "ProvisionedBandwidthCopySpeed": null
+    },
+    "DiskSizeGB": 64,
+    "DiskSizeBytes": 68719476736,
+    "UniqueId": "d3435ece-1157-48fa-9668-a99dc8f837da",
+    "EncryptionSettingsCollection": null,
+    "ProvisioningState": "Succeeded",
+    "DiskIOPSReadWrite": 240,
+    "DiskMBpsReadWrite": 50,
+    "DiskIOPSReadOnly": null,
+    "DiskMBpsReadOnly": null,
+    "DiskState": "Unattached",
+    "Encryption": {
+      "DiskEncryptionSetId": null,
+      "Type": "EncryptionAtRestWithPlatformKey"
+    },
+    "MaxShares": null,
+    "ShareInfo": [],
+    "Id": "/subscriptions/90583dc9-ee23-4fad-84de-95d37c7fb376/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/demo-data-disk",
+    "Name": "demo-data-disk",
+    "Type": "Microsoft.Compute/disks",
+    "Location": "ukwest",
+    "ExtendedLocation": null,
+    "Tags": {
+      "ASR-FODisk": "Created by Azure Site Recovery."
+    },
+    "NetworkAccessPolicy": "AllowAll",
+    "DiskAccessId": null,
+    "Tier": "P6",
+    "BurstingEnabled": null,
+    "PurchasePlan": null,
+    "SupportsHibernation": null,
+    "SecurityProfile": null,
+    "PublicNetworkAccess": "Enabled",
+    "SupportedCapabilities": null,
+    "DataAccessAuthMode": null,
+    "CompletionPercent": null,
+    "OptimizedForFrequentAttach": null
+  }
+]
