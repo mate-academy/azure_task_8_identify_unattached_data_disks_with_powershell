@@ -1,0 +1,12 @@
+Reading config
+Checking if temp folder exists
+Downloading artifacts
+Validating artifacts
+✅ Checked if Virtual Machine exists - OK.
+✅ Checked if disk resources exist in the task resource group - OK.
+✅ Checked the result.json has only 1 data disk - OK.
+✅ Checked the result.json has unattached disk - OK.
+✅ Checked the usage of 'Get-AzDisk' comandlet - OK.
+✅ Checked the script for the filtering by DiskState or ManagedBy - OK.
+
+🥳 Congratulations! All tests passed!
