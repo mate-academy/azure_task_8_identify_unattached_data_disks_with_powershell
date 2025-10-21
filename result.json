@@ -1,0 +1,6 @@
+{
+  "Name": "app-data-disk-uksouth",
+  "Location": "ukwest",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
