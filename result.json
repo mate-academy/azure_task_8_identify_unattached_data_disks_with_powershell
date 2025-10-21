@@ -1,0 +1,8 @@
+{
+  "Name": "app-data-disk-uksouth",
+  "Location": "ukwest",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached",
+  "ManagedBy": null,
+  "Id": "/subscriptions/7c43b80f-286d-4af9-9c5f-c34a65078107/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/app-data-disk-uksouth"
+}
