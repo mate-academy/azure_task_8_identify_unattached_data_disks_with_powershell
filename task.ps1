@@ -1,23 +1,18 @@
-# Write your code here
-# task.ps1
-# -----------------------------
-# Завдання: знайти всі unattached (від’єднані) диски у ресурсній групі
-# та зберегти їх у result.json
+# task.ps1 — знайти unattached диски у ресурсній групі
+$ResourceGroup = "mate-azure-task-5"
+$OutputFile    = "result.json"
 
-$resourceGroup = "mate-azure-task-5"
-$outputFile = "result.json"
+$disks = Get-AzDisk -ResourceGroupName $ResourceGroup
 
-# Отримуємо всі диски в ресурсній групі
-$disks = Get-AzDisk -ResourceGroupName $resourceGroup
+$unattached = $disks | Where-Object {
+    [string]::IsNullOrEmpty($_.ManagedBy) -or $_.DiskState -eq "Unattached"
+}
 
-# Фільтруємо лише ті, що не прикріплені до VM
-$unattached = $disks | Where-Object { $_.ManagedBy -eq $null -or $_.DiskState -eq "Unattached" }
+$result = @(
+    $unattached | Select-Object Name, Location, DiskSizeGB, DiskState, ManagedBy, Id
+)
 
-# Вибираємо важливі властивості
-$result = $unattached | Select-Object Name, Location, DiskSizeGB, DiskState
+@($result) | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $OutputFile -Encoding UTF8
 
-# Експортуємо у JSON
-$result | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath $outputFile -Encoding UTF8
-
-Write-Host "✅ Знайдено від’єднаних дисків: $($unattached.Count)"
-Write-Host "Результат збережено у $outputFile"
+Write-Host "✅ Знайдено від’єднаних дисків: $(@($unattached).Count)"
+Write-Host "📝 Результат збережено у: $OutputFile"
