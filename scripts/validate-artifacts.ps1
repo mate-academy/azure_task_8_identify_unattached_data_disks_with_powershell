@@ -32,7 +32,7 @@ if ($DownloadArtifacts) {
 
 Write-Output "Validating artifacts"
 $TemplateFileText = [System.IO.File]::ReadAllText("$tempFolderPath/$resourcesTemplateName")
-$TemplateObject = ConvertFrom-Json $TemplateFileText -AsHashtable
+$TemplateObject = ConvertFrom-Json $TemplateFileText
 
 $virtualMachine = ( $TemplateObject.resources | Where-Object -Property type -EQ "Microsoft.Compute/virtualMachines" )
 if ($virtualMachine) {
