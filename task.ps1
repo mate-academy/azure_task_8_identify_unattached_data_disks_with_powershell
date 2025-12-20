@@ -6,11 +6,11 @@ $unattachedDisks = $disks | Where-Object {
 }
 
 $result = $unattachedDisks | Select-Object `
-    Name,
-    Location,
-    DiskSizeGB,
-    Sku,
-    DiskState,
+    Name, `
+    Location, `
+    DiskSizeGB, `
+    Sku, `
+    DiskState, `
     ManagedBy
 
 $result | ConvertTo-Json -Depth 5 | Set-Content "result.json"
