@@ -13,4 +13,4 @@ $result = $unattachedDisks | Select-Object `
     DiskState, `
     ManagedBy
 
-$result | ConvertTo-Json -Depth 5 | Set-Content "result.json"
+@($result) | ConvertTo-Json -Depth 5 | Set-Content "result.json"
