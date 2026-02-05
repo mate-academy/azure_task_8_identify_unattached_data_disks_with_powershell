@@ -1,0 +1,11 @@
+{
+  "Name": "data",
+  "Location": "northeurope",
+  "DiskSizeGB": 64,
+  "Sku": {
+    "Name": "Premium_LRS",
+    "Tier": "Premium"
+  },
+  "DiskState": "Unattached",
+  "ManagedBy": null
+}
