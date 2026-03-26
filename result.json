@@ -1,0 +1,14 @@
+{
+  "Name": "data-disk",
+  "ResourceGroupName": "mate-azure-task-5",
+  "Location": "ukwest",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached",
+  "ManagedBy": null,
+  "OsType": null,
+  "Sku": {
+    "Name": "Premium_LRS",
+    "Tier": "Premium"
+  },
+  "Id": "/subscriptions/26112c26-3d7f-43f3-9d28-736fdde6c499/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/data-disk"
+}
