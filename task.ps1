@@ -1,1 +1,1 @@
-# Write your code here
+Get-AzDisk -ResourceGroupName "mate-azure-task-5"| Where-Object { $_.DiskState -eq "Unattached" } | ConvertTo-Json -Depth 10 | Out-File -FilePath ./result.json -Encoding UTF8 -Force
