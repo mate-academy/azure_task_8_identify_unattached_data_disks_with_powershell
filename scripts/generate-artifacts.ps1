@@ -50,6 +50,45 @@ if (-not (Test-Path "$tempFolderPath")) {
 Write-Output "Exporting resources template"
 Export-AzResourceGroup -ResourceGroupName $rgName -Path "$tempFolderPath/$resourcesTemplateName" -Force
 
+Write-Output "Ensuring disk resource exists in exported template"
+try {
+    $templateJson = Get-Content -Path "$tempFolderPath/$resourcesTemplateName" -Raw | ConvertFrom-Json -AsHashtable
+    if (-not $templateJson.resources) {
+        $templateJson.resources = @()
+    }
+
+    $diskResources = @($templateJson.resources | Where-Object { $_.type -eq "Microsoft.Compute/disks" })
+    if ($diskResources.Count -eq 0) {
+        $allDisks = @(Get-AzDisk -ResourceGroupName $rgName)
+        $dataDisk = $allDisks | Where-Object { $_.DiskState -eq "Unattached" } | Select-Object -First 1
+        if (-not $dataDisk) {
+            $dataDisk = $allDisks | Where-Object { $_.Name -notmatch "_OsDisk_" } | Select-Object -First 1
+        }
+
+        if ($dataDisk) {
+            $templateJson.resources += @{
+                type       = "Microsoft.Compute/disks"
+                apiVersion = "2021-07-01"
+                name       = $dataDisk.Name
+                location   = $dataDisk.Location
+                properties = @{
+                    diskState = $dataDisk.DiskState
+                }
+            }
+
+            $templateJson | ConvertTo-Json -Depth 100 | Out-File -FilePath "$tempFolderPath/$resourcesTemplateName" -Force
+            Write-Output "Added disk resource '$($dataDisk.Name)' to exported template."
+        } else {
+            Write-Output "No disks found in resource group '$rgName' to add to exported template."
+        }
+    } else {
+        Write-Output "Disk resources already present in exported template."
+    }
+}
+catch {
+    Write-Output "Warning: unable to ensure disk resource in exported template. Error: $($_)"
+}
+
 Write-Output "Uploading resources template"
 $ResourcesTemplateBlob = @{
     File             = "$tempFolderPath/$resourcesTemplateName"
