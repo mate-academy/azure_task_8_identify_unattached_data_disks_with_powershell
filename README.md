@@ -49,7 +49,7 @@ In this task, you will need to work with the infrastructure from the previous ta
     
     = The script should find all unattached disks in the resource group where the VM is deployed (`mate-azure-task-5`) and save information about them in JSON format to the file `result.json` in this repo.
     
-    - to find disks resources, the script should use comandlet [Get-AzDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azdisk?view=azps-11.5.0) from Az module. 
+    - to find disks resources, the script should use comandlet [Get-AzDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azdisk?view=azps-11.5.0) from Az module.
 
     - The script should filter disk objects to get only unattached ones. To check if a disk is attached, you can rely on either the 'DiskState' or 'ManagedBy' properties of the disk object, returned by the Get-AzDisk comandlet. When writing the script, explore the values of those properties to understand which value an unattached disk should have, and filter disk objects by that value in the script.  
 
