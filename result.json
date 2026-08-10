@@ -1,5 +1,5 @@
 {
-  "ResourceGroupName": "MATE-AZURE-TASK-5",
+  "ResourceGroupName": "mate-azure-task-5",
   "ManagedBy": null,
   "ManagedByExtended": [],
   "Sku": {
@@ -45,7 +45,7 @@
   },
   "MaxShares": null,
   "ShareInfo": [],
-  "Id": "/subscriptions/37a2cf50-67c7-45c2-b0b3-1a175955d134/resourceGroups/MATE-AZURE-TASK-5/providers/Microsoft.Compute/disks/mate-task-disk",
+  "Id": "/subscriptions/37a2cf50-67c7-45c2-b0b3-1a175955d134/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/mate-task-disk",
   "Name": "mate-task-disk",
   "Type": "Microsoft.Compute/disks",
   "Location": "denmarkeast",
