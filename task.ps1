@@ -1,22 +1,11 @@
-param(
-    [string]$ResourceGroupName = "mate-azure-task-5"
-)
+$resourceGroupName = "mate-azure-task-5"
 
-Write-Host "Пошук невикористовуваних дисків в $ResourceGroupName..."
+$allDisks = Get-AzDisk -ResourceGroupName $resourceGroupName
 
-# Отримайте всі диски в resource group
-$allDisks = Get-AzDisk -ResourceGroupName $ResourceGroupName
-
-# Фільтруйте невикористовувані диски
 $unattachedDisks = $allDisks | Where-Object {
     $_.DiskState -eq "Unattached" -or [string]::IsNullOrEmpty($_.ManagedBy)
 }
 
-# Покажіть результати
-Write-Host "✓ Знайдено $($unattachedDisks.Count) невикористовуваних дисків"
-$unattachedDisks | Select-Object Name, DiskState, ManagedBy, DiskSizeGB
-
-# Перетворіть результати в JSON
 $result = @()
 foreach ($disk in $unattachedDisks) {
     $result += @{
@@ -31,7 +20,6 @@ foreach ($disk in $unattachedDisks) {
     }
 }
 
-# Збережіть результати в result.json
 $result | ConvertTo-Json -Depth 10 | Out-File -FilePath "result.json" -Encoding UTF8
 
-Write-Host "✓ Результати збережені в result.json"
+Write-Host "Found $($result.Count) unattached disks"
