@@ -1,0 +1,11 @@
+{
+  "Location": "swedencentral",
+  "ManagedBy": null,
+  "Id": "/subscriptions/66e2962e-c2ee-46ea-90de-7e063b2994ac/resourceGroups/mate-azure-task-5/providers/Microsoft.Compute/disks/ihor-data-disk",
+  "DiskState": "Unattached",
+  "Name": "ihor-data-disk",
+  "Sku": "Premium_LRS",
+  "ResourceGroup": "mate-azure-task-5",
+  "SizeGB": 64
+}
+
