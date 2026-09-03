@@ -14,16 +14,14 @@ try {
     $VirtualMachine = Get-AzVM -ResourceGroupName "mate-azure-task-5" -Name "demo-vm"
     Remove-AzVMDataDisk -VM $VirtualMachine -Name "demo-disk"
     Update-AzVM -ResourceGroupName "mate-azure-task-5" -VM $VirtualMachine
-
+    $disks = Get-AzDisk -ResourceGroupName 'mate-azure-task-5'
     do {
-        $disk = Get-AzDisk -ResourceGroupName "mate-azure-task-5" -Name "demo-disk"
+        $disk = $disks | Where-Object { $_.Name -eq "demo-disk" }
         if ($disk.DiskState -ne "Unattached") {
             Start-Sleep -Seconds 5
         }
     } while ($disk.DiskState -ne "Unattached")
     
-
-    $disks = Get-AzDisk -ResourceGroupName 'mate-azure-task-5'
     $result = @()
     foreach ($disk in $disks) {
         if ($disk.DiskState -eq "Unattached") {
