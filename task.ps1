@@ -1,11 +1,11 @@
 #command for SSH
-# ssh nook17@10.0.1.4
-# dmesg | grep SCSI
-# sudo -i blkid
-# Open /etc/fstab
-# Remove artical about our disk
-# sudo umount /dev/sdc1 /data
-# Check /proc/mounts disk should be unmounted
+ssh nook17@10.0.1.4
+dmesg | grep SCSI
+sudo -i blkid
+Open /etc/fstab
+Remove artical about our disk
+sudo umount /dev/sdc1 /data
+Check /proc/mounts disk should be unmounted
 # Write your code here
 
 #Command for PowerShell
