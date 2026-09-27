@@ -1,0 +1,8 @@
+{
+  "Name": "mate-vm-data-disk",
+  "ResourceGroupName": "mate-azure-task-5",
+  "Location": "denmarkeast",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached",
+  "ManagedBy": null
+}
