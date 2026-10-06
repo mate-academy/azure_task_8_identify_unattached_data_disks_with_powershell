@@ -1,0 +1,7 @@
+{
+  "Name": "ts2-disk",
+  "ResourceGroupName": "MATE-AZURE-TASK-5",
+  "Location": "ukwest",
+  "DiskSizeGB": 64,
+  "DiskState": "Unattached"
+}
